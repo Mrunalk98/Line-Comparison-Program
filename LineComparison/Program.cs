@@ -29,7 +29,7 @@ namespace LineComparison
 
         }
 
-        // Use Case 1
+        // Use Case 2
         static void LengthCalculation(double x1, double x2, double y1, double y2, int index)
         {
             
