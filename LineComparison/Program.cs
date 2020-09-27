@@ -25,11 +25,11 @@ namespace LineComparison
                 LengthCalculation(x1, x2, y1, y2, i);
 
             }
-            CheckEquality();
+            CompareLengths();
 
         }
 
-        // Use Case 1
+        // Use Case 3
         static void LengthCalculation(double x1, double x2, double y1, double y2, int index)
         {
             
@@ -52,15 +52,20 @@ namespace LineComparison
 
         }
 
-        static void CheckEquality()
+        static void CompareLengths()
         {
-            if (len1.Equals(len2))
+            var val = len1.CompareTo(len2);
+            if (val == 0)
             {
                 Console.WriteLine("The two lines are equal");
-            }
-            else
+            } 
+            else if (val == 1)
             {
-                Console.WriteLine("The two lines are not equal");
+                Console.WriteLine("Line 1 is greater than Line 2");
+            }
+            else if (val == -1)
+            {
+                Console.WriteLine("Line 1 is less than Line 2");
             }
         }
     }
